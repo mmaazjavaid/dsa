@@ -33,6 +33,20 @@ void recursivePrint(Node* p){
     recursivePrint(p->next);
     
 }
+void reversePrintUsingPrev(Node* h){
+    Node* temp=head;
+    while(temp->next!=NULL){
+        temp=temp->next;
+    }
+    cout<<"GOT THE END ............."<<endl;
+    cout<<"NOW REVERSING............"<<endl;
+    do{
+        cout<<"data : "<<temp->data<<endl;
+        temp=temp->prev;
+    }while (temp!=NULL);
+    
+    
+}
 int main(){
     head=NULL;
     insertNodeAtHead(1);
@@ -40,5 +54,6 @@ int main(){
     insertNodeAtHead(3);
     insertNodeAtHead(4);
     recursivePrint(head);
+    reversePrintUsingPrev(head);
     return 0;
 }
