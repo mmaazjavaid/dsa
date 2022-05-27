@@ -44,7 +44,8 @@ void reversePrintUsingPrev(Node* h){
         cout<<"data : "<<temp->data<<endl;
         temp=temp->prev;
     }while (temp!=NULL);
-    
+    cout<<"temp now : "<<endl;
+    cout<<temp->prev<<endl;
     
 }
 int main(){
